@@ -20,8 +20,8 @@
     "lint:commit": "eslint --max-warnings 0",
     "test": "yarn jest --watch",
     "test:all": "yarn jest",
-    "copy:ts": "yarn copyfiles --flat src/flex/*.d.ts dist",
-    "prepublish": "yarn clean && yarn copy:ts && babel src/flex --ignore **/*.test.js --out-dir dist"
+    "copy:ts": "yarn copyfiles --flat src/blox/*.d.ts dist",
+    "prepublish": "yarn clean && yarn copy:ts && babel src/blox --ignore **/*.test.js --out-dir dist"
   },
   "lint-staged": {
     "*.js": [
