@@ -1,87 +1,38 @@
-# Project Title
+# MUI-Blox
 
-One Paragraph of project description goes here
+Useful variants of the Material-UI `Box` component. Currently the only component is `Flex`, which mimics the behavior of `react-flexbox`. However, in addition to this functionality, all the props of `Box` are available. 
+This version also includes a fix for a the min-height bug that interferes with the ability to create scrollable flex elements for Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=1043520)
 
-## Getting Started
+## Install
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+```
+yarn add mui-blox
+# or
+npm install --save mui-blox
+```
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Material-UI v4 or greater.
+(https://github.com/mui-org/material-ui)
+
+## Usage
 
 ```
-Give examples
+import React from 'react'
+import { Flex } from 'mui-blox
+import { Button } from '@material-ui/core
+
+const MyComponent = props => {
+  return (
+    <Flex justifyContent='space-between' p={1}>
+      <Button onClick={() => doSomething()}>Button1</Button>
+      <Button onClick={() => doSomethingElse()}>Button2</Button>
+    </Flex>
+  )
+}
 ```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
