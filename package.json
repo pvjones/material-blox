@@ -1,13 +1,13 @@
 {
-  "name": "material-blox",
+  "name": "material-flex",
   "version": "0.1.3",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pvjones/material-blox.git"
+    "url": "git+https://github.com/pvjones/material-flex.git"
   },
   "author": "Paul Jones <paulvjones@gmail.com>",
-  "homepage": "https://github.com/pvjones/material-blox#readme",
+  "homepage": "https://github.com/pvjones/material-flex#readme",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -20,8 +20,8 @@
     "lint:commit": "eslint --max-warnings 0",
     "test": "yarn jest --watch",
     "test:all": "yarn jest",
-    "copy:ts": "yarn copyfiles --flat src/blox/*.d.ts dist",
-    "prepublish": "yarn clean && yarn copy:ts && babel src/blox --ignore **/*.test.js --out-dir dist"
+    "copy:ts": "yarn copyfiles --flat src/flex/*.d.ts dist",
+    "prepublish": "yarn clean && yarn copy:ts && babel src/flex --ignore **/*.test.js --out-dir dist"
   },
   "lint-staged": {
     "*.js": [
