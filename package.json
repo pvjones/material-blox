@@ -1,13 +1,13 @@
 {
-  "name": "mui-flex",
+  "name": "mui-blox",
   "version": "0.1.4",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pvjones/mui-flex.git"
+    "url": "git+https://github.com/pvjones/mui-blox.git"
   },
   "author": "Paul Jones <paulvjones@gmail.com>",
-  "homepage": "https://github.com/pvjones/mui-flex#readme",
+  "homepage": "https://github.com/pvjones/mui-blox#readme",
   "main": "dist/index.js",
   "files": [
     "dist"
