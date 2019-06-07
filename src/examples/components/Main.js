@@ -1,15 +1,15 @@
 import React from 'react'
-import Blox from '../../blox'
+import Flex from '../../flex'
 
 const Main = () => {
   return (
-    <Blox
+    <Flex
       flexFull
       bgcolor='lightblue'
       m={2}
     >
       Main Content
-    </Blox>
+    </Flex>
   )
 }
 

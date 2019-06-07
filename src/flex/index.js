@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { Box } from '@material-ui/core'
 
-const Blox = forwardRef((props, ref) => {
+const Flex = forwardRef((props, ref) => {
   const {
     children,
     flex,
@@ -24,19 +24,22 @@ const Blox = forwardRef((props, ref) => {
   )
 })
 
-Blox.displayName = 'Blox'
-Blox.propTypes = {
+Flex.displayName = 'Flex'
+Flex.propTypes = {
   flexFull: PropTypes.bool,
-  flex: PropTypes.number,
+  flex: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
   flexDirection: PropTypes.string,
 }
-Blox.defaultProps = {
+Flex.defaultProps = {
   flexFull: false,
   flex: null,
   flexDirection: null,
 }
 
-export default Blox
+export default Flex
 
 const isValid = value =>
   Boolean(value) || value === 0
