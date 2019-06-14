@@ -1,4 +1,4 @@
-import React, { forwardRef, RefForwardingComponent } from 'react'
+import React, { forwardRef } from 'react'
 import Box, { BoxProps } from '@material-ui/core/Box'
 
 const Flex: React.FC<FlexProps> =
@@ -47,7 +47,6 @@ const getFlexProps = ({
 }
 
 export interface FlexProps extends BoxProps {
-  flex: String | Number
   flexFull: Boolean
   ref: React.Ref<HTMLElement>
 }
