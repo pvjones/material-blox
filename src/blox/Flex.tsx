@@ -2,7 +2,7 @@ import React, { forwardRef, RefForwardingComponent } from 'react'
 import Box, { BoxProps } from '@material-ui/core/Box'
 
 const Flex: React.FC<FlexProps> =
-  forwardRef((props: FlexProps, ref?: React.Ref) => {
+  forwardRef((props: FlexProps, ref?: React.Ref<HTMLElement>) => {
     const {
       children,
       flex,
@@ -12,13 +12,14 @@ const Flex: React.FC<FlexProps> =
     } = props
 
     const flexProps = getFlexProps({ flex, flexDirection, flexFull })
+    const FlexProps = {
+      ...flexProps,
+      ...other,
+      ref,
+    }
 
     return (
-      <Box
-        {...flexProps}
-        {...other}
-        ref={ref}
-      >
+      <Box {...FlexProps}>
         {children}
       </Box>
     )
@@ -48,4 +49,5 @@ const getFlexProps = ({
 export interface FlexProps extends BoxProps {
   flex: String | Number
   flexFull: Boolean
+  ref: React.Ref<HTMLElement>
 }
