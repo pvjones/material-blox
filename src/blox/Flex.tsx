@@ -29,7 +29,7 @@ Flex.displayName = 'Flex'
 
 export default Flex
 
-const isValid = (value: String | Number | undefined): Boolean =>
+const isValid = (value: string | number | undefined): boolean =>
   Boolean(value) || value === 0
 
 const getFlexProps = ({
@@ -38,8 +38,8 @@ const getFlexProps = ({
   flexFull,
 }: Partial<FlexProps>): Partial<FlexProps> => {
   return {
-    display: 'flex',
     flexDirection,
+    display: 'flex',
     ...(isValid(flex) ? { flex } : {}),
     ...(isValid(flex) && flexDirection === 'column' ? { minHeight: 0 } : {}),
     ...(flexFull ? { flexDirection: 'column', flex: 1, minHeight: 0 } : {}),
@@ -47,6 +47,6 @@ const getFlexProps = ({
 }
 
 export interface FlexProps extends BoxProps {
-  flexFull: Boolean
-  ref: React.Ref<HTMLElement>
+  flexFull: boolean
+  ref?: React.Ref<HTMLElement>
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Main from './components/Main'
 
-const App = () => {
+const App: React.SFC<{}> = () => {
   return (
     <div className='App'>
       <Main />

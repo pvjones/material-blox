@@ -9,16 +9,19 @@ const presetConfig = require('./loadPresets')
 const modeConfig = env => require(`./webpack.${env}`)(env) // eslint-disable-line
 
 module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) => {
-  console.log('building', mode, presets)
   return webpackMerge(
     {
       mode,
       entry: [
         'babel-polyfill',
-        './src/examples/index.js',
+        './src/examples/index.tsx',
       ],
       module: {
         rules: [
+          {
+            test: /\.tsx?$/,
+            loader: 'awesome-typescript-loader'
+          },
           {
             test: /\.js$/,
             exclude: /node_modules/,
@@ -57,7 +60,7 @@ module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) => {
         ],
       },
       resolve: {
-        extensions: ['.scss', '.js', '.json', '.png', '.gif', '.jpg', '.svg'],
+        extensions: ['.ts', '.tsx', '.js', '.json', '.scss', '.png', '.gif', '.jpg', '.svg'],
       },
       plugins: [
         mode === 'development' ? new Dotenv() : () => { },

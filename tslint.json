@@ -29,7 +29,6 @@
       true,
       170
     ],
-    "no-unused-variable": true,
     "no-namespace": false,
     "member-access": [
       false
@@ -62,29 +61,24 @@
       }
     ],
     "arrow-parens": false,
-    "import/no-extraneous-dependencies": "warn",
-    "import/first": "warn",
     "ordered-imports": [
       true,
       {
-        "grouped-imports": true,
         "import-sources-order": "any",
         "named-imports-order": "any",
-        "module-source-path": "root"
+        "module-source-path": "full"
       }
     ],
+    "no-shadowed-variable": false,
     "no-var-requires": false,
     "no-string-literal": false,
     "object-literal-sort-keys": false,
     "object-literal-key-quotes": false,
     "no-submodule-imports": false,
-    "spaced-comment": true,
-    "no-unneeded-ternary": "warn",
     "arrow-body-style": [
       "warn",
       "as-needed"
     ],
-    "no-trailing-spaces": "warn",
     "curly": false,
     "no-console": [
       true,
@@ -107,13 +101,6 @@
     "jsx-boolean-value": false,
     "jsx-no-multiline-js": false,
     "jsx-no-lambda": false,
-    "trailing-comma": [
-      true,
-      {
-        "multiline": "always",
-        "singleline": "never"
-      }
-    ],
     "space-before-function-paren": false,
     "ter-indent": false,
     "variable-name": [

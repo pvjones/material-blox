@@ -16,15 +16,15 @@
     "build": "webpack --env.mode production --config ./config/webpack.config.js",
     "start": "webpack-dev-server --env.mode development --color true --config ./config/webpack.config.js --open",
     "clean": "yarn cleandir dist",
-    "lint": "eslint src --ext .js --max-warnings 0",
-    "lint:commit": "eslint --max-warnings 0",
+    "lint": "tslint 'src/**/*.ts?(x)'",
+    "lint:commit": "tslint 'src/**/*.ts?(x)'",
     "test": "yarn jest --watch",
     "test:all": "yarn jest",
     "copy:ts": "yarn copyfiles --flat src/blox/*.d.ts dist",
-    "prepublish": "yarn clean && yarn copy:ts && babel src/blox --ignore **/*.test.js --out-dir dist"
+    "prepare": "rm -rf ./dist && tsc"
   },
   "lint-staged": {
-    "*.js": [
+    "*.ts?(x)": [
       "yarn lint:commit",
       "git add"
     ]
@@ -52,6 +52,7 @@
     "@material-ui/core": "^4.1.1",
     "@types/react": "^16.8.20",
     "@types/react-dom": "^16.8.4",
+    "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
@@ -65,12 +66,6 @@
     "css-loader": "^1.0.0",
     "dotenv-webpack": "^1.5.7",
     "error-overlay-webpack-plugin": "^0.1.5",
-    "eslint": "^5.8.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-react-app": "^3.0.4",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^2.2.0",
@@ -81,6 +76,9 @@
     "source-map-support": "^0.5.9",
     "style-loader": "^0.23.1",
     "tslint": "^5.17.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^4.0.0",
     "typescript": "^3.5.2",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.6",

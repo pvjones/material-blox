@@ -1,7 +1,7 @@
 import React from 'react'
 import Flex from '../../blox/Flex'
 
-const Main = () => {
+const Main: React.SFC<{}> = () => {
   return (
     <Flex
       flexFull
