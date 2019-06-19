@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "rootDir": "./src/blox",
     "outDir": "./dist",
     "target": "es5",
     "module": "commonjs",
@@ -16,8 +17,8 @@
     ]
   },
   "include": [
-    "./src/**/*.tsx",
-    "./src/**/*.ts"
+    "./src/blox/**/*.tsx",
+    "./src/blox/**/*.ts"
   ],
   "exclude": [
     "node_modules"
