@@ -2,7 +2,7 @@
 
 This project provides a simple extension of the Material-UI `Box` component called `Flex`. It mimics the behavior 
 of `flexbox-react` and exposes a similar API. All the props of `Box` are also available via Material-UI's built-in styling 
-functions. 
+functions (which is in turn insipired by `styled-system`). 
 
 This version includes a fix for a the [min-height bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1043520) that 
 interferes with the ability to create scrollable flex elements for Firefox.
