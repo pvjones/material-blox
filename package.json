@@ -49,7 +49,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-0": "^7.0.0",
     "@babel/runtime": "^7.1.5",
-    "@material-ui/core": "^4.1.1",
+    "@material-ui/core": "^4.3.3",
     "@types/react": "^16.8.20",
     "@types/react-dom": "^16.8.4",
     "awesome-typescript-loader": "^5.2.1",
@@ -70,8 +70,8 @@
     "html-webpack-plugin": "^3.2.0",
     "husky": "^2.2.0",
     "lint-staged": "^8.1.6",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "sass-loader": "^7.1.0",
     "source-map-support": "^0.5.9",
     "style-loader": "^0.23.1",
@@ -88,5 +88,7 @@
     "webpack-merge": "^4.1.4",
     "webpack-node-externals": "^1.7.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12"
+  }
 }
