@@ -4,11 +4,19 @@ import Flex from '../../blox/Flex'
 const Main: React.SFC<{}> = () => {
   return (
     <Flex
-      flexFull
+      flexColumn
       bgcolor='lightblue'
       m={2}
     >
-      Main Content
+      <div>
+        Main Content
+      </div>
+      <div>
+        Secondary Content
+      </div>
+      <div>
+        Tertiary Content
+      </div>
     </Flex>
   )
 }

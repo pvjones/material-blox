@@ -54,8 +54,8 @@ const getFlexProps = ({
 }
 
 export interface FlexProps extends BoxProps {
-  flexColumn: boolean
-  flexFull: boolean
-  flexRow: boolean
+  flexColumn?: boolean
+  flexFull?: boolean
+  flexRow?: boolean
   ref?: React.Ref<HTMLElement>
 }
