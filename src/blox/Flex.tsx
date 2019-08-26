@@ -45,10 +45,10 @@ const getFlexProps = ({
     flexDirection,
     display: 'flex',
     ...(isValid(flex) ? { flex } : {}),
-    ...(isValid(flex) && flexDirection === 'column' ? { minHeight: 0 } : {}),
+    ...(isValid(flex) && flexDirection === 'column' ? { minHeight: '0%' } : {}),
     ...(isValid(flex) && flexDirection === 'row' ? { minWidth: '0%' } : {}),
-    ...(flexFull ? { flexDirection: 'column', flex: 1, minHeight: 0 } : {}), // maintained for backwards compatibility
-    ...(flexColumn ? { flexDirection: 'column', flex: 1, minHeight: 0 } : {}),
+    ...(flexFull ? { flexDirection: 'column', flex: 1, minHeight: '0%' } : {}), // maintained for backwards compatibility
+    ...(flexColumn ? { flexDirection: 'column', flex: 1, minHeight: '0%' } : {}),
     ...(flexRow ? { flexDirection: 'row', flex: 1, minWidth: '0%' } : {}),
   }
 }
