@@ -13,7 +13,7 @@ const Flex: React.FC<FlexProps> =
       ...other
     } = props
 
-    const flexProps = getFlexProps({ flex, flexDirection, flexFull })
+    const flexProps = getFlexProps({ flex, flexDirection, flexFull, flexColumn, flexRow })
     const FlexProps = {
       ...flexProps,
       ...other,
