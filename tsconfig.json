@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
+    "rootDir": "./src/blox",
     "outDir": "./dist",
     "target": "es5",
     "module": "commonjs",
